@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finde alles was du brauchst auf Tweede!">
+    <meta name="author" content="Nicolas Joss">
+    <link rel="icon" type="image/x-icon" href="assets/images/branding/TweedeFavicon3.png">
+
+    <title>Tweede - Alles was du brauchst</title>
+    <link rel="stylesheet" href="newstyle.css">
+</head>
+
+<body>
+    <header>
+        <a href="/"><img src="assets/images/branding/Tweede3.png" alt="logo" class="logo"></a>
+        <nav class="page-selector">
+            <ul>
+                <li><a href="/" class="sel-under">Vorschläge</a></li>
+                <li><a href="produkte.html" class="">Produkte</a></li>
+                <li><a href="inserate.html" class="">Inserate</a></li>
+            </ul>
+        </nav>
+        <input type="search" placeholder="What are you looking for?" id="searchbar" class="searchbar" required>
+        <a href="erstellen.html"><button class="mainbutton btn2" id="create">+ Inserat erstellen</button></a>
+    </header>
+
+    <main style="justify-content: center; align-items: center;">
+        <h1 class="create-title1">Gratis Inerat aufgeben</h1>
+        <section class="create-form">
+            <h2>Neues Inserat</h2>
+            <form method="post" action="https://gibm.becknet.ch/formular/formular.php">
+                <fieldset class="filter-group">
+                    <legend>Inserat</legend>
+                    <div>
+                        <label for="titel" class="filter-title">Inserattitel *</label>
+                        <br>
+                        <input class="field-input" type="text" id="titel" name="titel" minlength="4" maxlength="50"
+                            required autofocus>
+                    </div>
+                    <div>
+                        <label for="beschreibung" class="filter-title">Beschreibung</label><br>
+                        <textarea class="field-input" id="beschreibung" name="beschreibung" rows="4"
+                            placeholder="Beschreiben Sie Ihr Produkt genauer..."></textarea>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 16px;">
+                        <div style="width: 100%;">
+                            <label for="preis" class="filter-title">Preis *</label>
+                            <br>
+                            <input class="field-input" type="number" name="preis" id="preis" max="10000" min="0"
+                                step="0.01" required>
+                        </div>
+                        <div style="width: 100%;">
+                            <label for="waehrung" class="filter-title">Währung</label>
+                            <br>
+                            <input class="field-input" type="text" id="waehrung" name="waehrung" value="CHF" readonly
+                                size="5">
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <label for="kategorie-auswahl" class="filter-title">Kategorie</label>
+                        <select class="dropdown-select" name="kategorie" id="kategorie-auswahl">
+                            <option value="">Bitte wählen...</option>
+                            <option value="haushalt">Haushalt</option>
+                            <option value="elektronik">Elektronik</option>
+                            <option value="kleidung">Kleidung</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Über Sie</legend>
+                    <div>
+                        <label class="filter-title">Anrede *</label>
+                        <br>
+                        <input type="radio" name="anrede" id="frau" value="Frau" required>
+                        <label for="frau">Frau</label>
+                        <input type="radio" name="anrede" id="herr" value="Herr" required>
+                        <label for="herr">Herr</label>
+                        <input type="radio" name="anrede" id="anderes" value="Anderes" required>
+                        <label for="anderes">Anderes</label>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 16px;">
+                        <div style="width: 100%;">
+                            <label for="vorname">Vorname</label>
+                            <br>
+                            <input class="field-input" type="text" id="vorname" name="vorname">
+                        </div>
+                        <div style="width: 100%;">
+                            <label for="nachname" class="filter-title">Nachname</label>
+                            <br>
+                            <input class="field-input" type="text" id="nachname" name="nachname">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="telefon" class="filter-title">Telefon</label>
+                        <br>
+                        <input class="field-input" type="tel" id="telefon" name="telefon"
+                            pattern="07[5-9]\s\d{3}\s\d{2}\s\d{2}" placeholder="000 000 00 00" size="15">
+                    </div>
+                    <div>
+                        <label for="mail" class="filter-title">E-Mail *</label>
+                        <br>
+                        <input class="field-input" type="email" id="mail" name="mail" required>
+                    </div>
+                    <div>
+                        <label for="geburtsdatum" class="filter-title">Geburtsdatum</label>
+                        <br>
+                        <input class="field-input" type="date" id="geburtsdatum" name="geburtsdatum" disabled>
+                    </div>
+                </fieldset>
+
+                <button class="filter-btn" type="submit">Inserat gratis aufgeben</button>
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <small>Tweede © 2026 Nicolas Joss</small>
+    </footer>
+</body>
+
+</html>
